@@ -3,15 +3,15 @@ import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { Count } from "./Count.jsx";
+import DownloadButton2 from "./DownloadButton2.jsx";
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen  overflow-hidden "
+      className="relative w-full min-h-full py-5 overflow-hidden"
     >
       {/* Background elements */}
-
       <div className="absolute top-0 left-0 w-72 h-72 bg-pink-500 opacity-20 rounded-full blur-3xl pointer-events-none -z-10"></div>
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-purple-600 opacity-15 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
@@ -59,14 +59,14 @@ const Hero = () => {
                   </span>
                 </h1>
 
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold  text-white">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white">
                   into{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r  from-blue-400 to-purple-400">
                     Real Projects
                   </span>
                 </h1>
 
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold  text-white">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white">
                   that{" "}
                   <TypeAnimation
                     sequence={[
@@ -82,19 +82,21 @@ const Hero = () => {
                     wrapper="span"
                     cursor={true}
                     repeat={Infinity}
-                    className="text-transparent bg-clip-text bg-gradient-to-r  from-blue-400 to-purple-400"
+                    className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"
                   />
                 </h1>
               </div>
 
-              {/* Introduction text */}
+              {/* Introduction */}
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8, duration: 0.5 }}
-                className="text-lg md:text-xl  text-gray-300 max-w-2xl leading-relaxed"
+                className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed"
               >
-                Hi, I’m Rimu — a results-driven full-stack developer from Bangladesh. I craft high-performance, user-centered web solutions that help businesses grow and stand out.
+                Hi, I’m Rimu — a results-driven full-stack developer from
+                Bangladesh. I craft high-performance, user-centered web
+                solutions that help businesses grow and stand out.
               </motion.p>
 
               {/* CTA Buttons */}
@@ -102,28 +104,38 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 0.5 }}
-                className="flex flex-wrap gap-4 mt-8"
+                className="flex flex-wrap gap-4 mt-8 items-center"
               >
+                {/* Know More button */}
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  className="flex flex-col gap-4 w-full sm:w-auto"
                 >
                   <Link
                     to="experience"
                     smooth={true}
                     duration={500}
-                    offset={-50} // Adjust if you have a fixed navbar
-                    className="px-8 py-3.5 rounded-lg bg-gradient-to-r  from-blue-600 to-purple-600 text-white font-medium shadow-md hover:shadow-lg hover:shadow-blue-500/30  transition-all duration-300"
+                    offset={-50}
+                    className="px-4 py-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium shadow-md hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
                   >
-                    {" "}
                     Know More About My Learning Journey
                   </Link>
+                </motion.div>
+
+                {/* Download Button */}
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full sm:w-auto"
+                >
+                  <DownloadButton2 />
                 </motion.div>
               </motion.div>
             </motion.div>
           </div>
 
-          {/* Right column - Stats */}
+          {/* Right column - Count stats */}
           <div className="relative z-10">
             <Count />
           </div>
@@ -140,16 +152,7 @@ const Hero = () => {
             .getElementById("about")
             .scrollIntoView({ behavior: "smooth" })
         }
-      >
-        <span className="text-sm  text-gray-400 mb-2">Explore more</span>
-        <div className="w-6 h-10 border-2 border-gray-400  rounded-full flex justify-center">
-          <motion.div
-            animate={{ y: [0, 5, 0], opacity: [1, 0.5, 1] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-            className="w-1 h-2  bg-gray-400 rounded-full mt-2"
-          ></motion.div>
-        </div>
-      </motion.div>
+      ></motion.div>
     </section>
   );
 };

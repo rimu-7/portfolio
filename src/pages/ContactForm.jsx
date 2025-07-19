@@ -95,8 +95,9 @@ const ContactForm = ({ onClose }) => {
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors"
+          className="tooltip absolute top-4 right-4 z-10 p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors"
           aria-label="Close contact form"
+          data-tip="Close"
         >
           <CircleX size={24} className="text-red-400" />
         </button>

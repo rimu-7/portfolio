@@ -4,7 +4,7 @@ import CustomAccordion from "../components/Accordin.jsx";
 import ExperienceSection from "./ExperienceSection.jsx";
 import Hero from "./Hero.jsx";
 import { ArrowUp } from "lucide-react";
-import Projects from "./Projects.jsx";
+import FeaturedProjects from "./FeaturedProjects.jsx";
 
 const Home = () => {
   const [isHomeSection, setIsHomeSection] = useState(true);
@@ -50,7 +50,7 @@ const Home = () => {
       <div id="home">
         <Hero />
       </div>
-      <Projects />
+      <FeaturedProjects />
       <ExperienceSection />
       <CustomAccordion />
     </div>

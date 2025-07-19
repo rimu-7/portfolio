@@ -138,9 +138,15 @@ const CustomAccordion = () => {
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-purple-600 opacity-15 rounded-full blur-3xl pointer-events-none -z-10"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-normal text-purple-500  mb-4">
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-5xl md:text-6xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500"
+          >
             Frequently Asked Questions
-          </h2>
+          </motion.h1>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
             Find answers to common questions about my development services and
             process

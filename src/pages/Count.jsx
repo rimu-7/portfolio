@@ -13,20 +13,22 @@ export const Count = () => {
   // Prevent background scrolling when contact form is open (same as Navbar)
   useEffect(() => {
     if (showContact) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
 
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     };
   }, [showContact]);
 
   useEffect(() => {
     const fetchCount = async () => {
       try {
-        const response = await axios.get("https://personal-portfolio-backend-weld.vercel.app/api/counts");
+        const response = await axios.get(
+          "https://personal-portfolio-backend-weld.vercel.app/api/counts"
+        );
         const processedData = response.data.map((item) => ({
           ...item,
           exprience: Number(item.exprience),
@@ -89,7 +91,8 @@ export const Count = () => {
         <motion.button
           whileHover={{ y: -5 }}
           onClick={() => setShowContact(true)}
-          className="relative hover:text-purple-700 gap-2 overflow-hidden cursor-pointer flex flex-col items-center justify-center bg-gray-800 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
+          className="tooltip relative hover:text-purple-700 gap-2 overflow-hidden cursor-pointer flex flex-col items-center justify-center bg-gray-800 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
+          data-tip="Contact Me" // Corrected tooltip text
         >
           <MessageCircleCodeIcon className="w-15 h-15" />
           <p className="flex items-center text-lg hover:scale-105 transition-all duration-300">
@@ -101,9 +104,7 @@ export const Count = () => {
       )}
 
       {/* Contact Form Popup - same as Navbar */}
-      {showContact && (
-        <ContactForm onClose={() => setShowContact(false)} />
-      )}
+      {showContact && <ContactForm onClose={() => setShowContact(false)} />}
     </div>
   );
 };

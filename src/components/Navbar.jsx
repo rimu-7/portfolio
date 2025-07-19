@@ -2,6 +2,7 @@ import { LucideHome, LucidePackage, LucideMessageCircleCode, GraduationCap } fro
 import { Link } from "react-scroll";
 import { useState, useEffect } from "react";
 import ContactForm from "../pages/ContactForm";
+import DownloadButton from "./DownloadButton";
 
 const Navbar = () => {
 	const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -77,6 +78,9 @@ const Navbar = () => {
 							<LucideMessageCircleCode className="w-5 h-5" />
 						</button>
 					</li>
+					
+						<DownloadButton/>
+					
 				</ul>
 			</div>
 

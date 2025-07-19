@@ -4,6 +4,7 @@ import Layout from "./Layout";
 import Login from "./private/Login.jsx";
 import Profile from "./private/Profile.jsx";
 import { ToastContainer, Zoom } from "react-toastify";
+import Register from "./private/Register.jsx";
 
 // Lazy-loaded pages for better performance
 const Home = lazy(() => import("./pages/Home"));
@@ -39,6 +40,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/count" element={<Count />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
             {/* Error Handling */}
             <Route path="*" element={<NotFound />} />
