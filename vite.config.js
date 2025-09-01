@@ -14,7 +14,7 @@ export default defineConfig({
   server: {
   proxy: {
     "/api": {
-      target: "https://personal-portfolio-backend-weld.vercel.app",
+      target: "https://portfolio-backend-ten-rho.vercel.app/api/projects",
       changeOrigin: true,
       secure: false,
     },

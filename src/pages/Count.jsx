@@ -27,7 +27,7 @@ export const Count = () => {
     const fetchCount = async () => {
       try {
         const response = await axios.get(
-          "https://personal-portfolio-backend-weld.vercel.app/api/counts"
+          "https://portfolio-backend-ten-rho.vercel.app/api/projects/api/counts"
         );
         const processedData = response.data.map((item) => ({
           ...item,
