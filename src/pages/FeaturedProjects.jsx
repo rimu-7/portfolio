@@ -40,7 +40,7 @@ const FeaturedProjects = () => {
   }, [showModal]);
 
   return (
-    <section className="py-16">
+    <section id="projects" className="py-16 max-w-7xl mx-auto">
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ const FeaturedProjects = () => {
         Featured Projects
       </motion.h1>
 
-      <div className="max-w-7xl mx-auto px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="mx-auto px-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {loading
           ? [...Array(3)].map((_, i) => (
               <div
@@ -65,6 +65,10 @@ const FeaturedProjects = () => {
                 whileHover={{ scale: 1.02 }}
                 className="rounded-xl shadow-lg overflow-hidden backdrop-blur-2xl border border-gray-800 hover:shadow-xl transition-all duration-300"
               >
+                {/* Background elements */}
+                <div className="absolute  top-0 left-20 w-72 h-72 bg-pink-500 opacity-20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+                <div className="absolute top-1/3 right-20 w-96 h-96 bg-purple-600 opacity-15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
                 <div className="relative h-64 overflow-hidden group">
                   <img
                     src={project.image}
@@ -121,10 +125,10 @@ const FeaturedProjects = () => {
             ))}
       </div>
 
-      <div className="text-center mt-14">
+      <div className="text-center mt-14 mx-5">
         <button
           onClick={() => setShowModal(true)}
-          className="tooltip inline-flex items-center px-6 py-3 text-white bg-gradient-to-r from-pink-700 to-purple-700 rounded-md hover:scale-105 transition-transform duration-300"
+          className="tooltip inline-flex items-center  px-6 sm:w-full md:w-auto py-3 text-white bg-gradient-to-l from-[#fb7185] via-[#a21caf] to-[#6366f1] rounded-md hover:scale-105 transition-transform duration-300"
           data-tip="View all projects"
         >
           View All Projects

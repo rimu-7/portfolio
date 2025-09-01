@@ -9,11 +9,11 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative w-full min-h-full py-5 overflow-hidden"
+      className="relative w-full max-w-7xl mx-auto min-h-full py-5 overflow-hidden"
     >
       {/* Background elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-pink-500 opacity-20 rounded-full blur-3xl pointer-events-none -z-10"></div>
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-purple-600 opacity-15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div className="absolute  top-0 left-20 w-72 h-72 bg-pink-500 opacity-20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div className="absolute top-1/3 right-20 w-96 h-96 bg-purple-600 opacity-15 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
       {/* Main content */}
       <div className="container mx-auto px-6 lg:px-12 py-24 h-full flex items-center">
@@ -117,9 +117,9 @@ const Hero = () => {
                     smooth={true}
                     duration={500}
                     offset={-50}
-                    className="px-4 py-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium shadow-md hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
+                    className="px-4 py-3.5 rounded-lg text-center bg-gradient-to-l from-[#fb7185] via-[#a21caf] to-[#6366f1] text-white font-medium shadow-md hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
                   >
-                    Know More About My Learning Journey
+                    Know More About Me
                   </Link>
                 </motion.div>
 

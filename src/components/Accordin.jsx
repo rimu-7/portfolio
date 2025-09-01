@@ -133,9 +133,13 @@ const CustomAccordion = () => {
   ];
 
   return (
-    <div className="relative w-full   overflow-hidden ">
-      <div className="absolute top-20 left-0 w-72 h-72 bg-pink-500 opacity-20 rounded-full blur-3xl pointer-events-none -z-10"></div>
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-purple-600 opacity-15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div className="relative max-w-7xl mx-auto   overflow-hidden ">
+
+      <div className="absolute top-100 left-20 w-72 h-72 bg-pink-500 opacity-20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div className="absolute bottom-25 left-20 w-72 h-72 bg-pink-500 opacity-20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div className="absolute top-2/4 right-20 w-96 h-96 bg-purple-600 opacity-15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+     
+     
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <motion.h1
@@ -143,7 +147,7 @@ const CustomAccordion = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-6xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500"
+            className="text-5xl md:text-6xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-l from-[#fb7185] via-[#a21caf] to-[#6366f1]"
           >
             Frequently Asked Questions
           </motion.h1>

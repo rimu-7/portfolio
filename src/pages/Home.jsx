@@ -5,6 +5,8 @@ import ExperienceSection from "./ExperienceSection.jsx";
 import Hero from "./Hero.jsx";
 import { ArrowUp } from "lucide-react";
 import FeaturedProjects from "./FeaturedProjects.jsx";
+import Marquee from "./Marquee.jsx";
+import LearningJourney from "./Learning.jsx";
 
 const Home = () => {
   const [isHomeSection, setIsHomeSection] = useState(true);
@@ -33,24 +35,27 @@ const Home = () => {
   return (
     <div>
       {/* Conditionally render the button based on the current section */}
-      {/* {!isHomeSection && (
-				<div className="fixed intex-0 bottom-5 right-5">
-					<Link
-						to="home"
-						smooth={true}
-						duration={500}
-						offset={-50} // Adjust if you have a fixed navbar
-					>
-						<div className="w-10 h-10 flex justify-center items-center bg-purple-600 rounded-full">
-							<ArrowUp className="w-7 h-7" />
-						</div>
-					</Link>
-				</div>
-			)} */}
+      {!isHomeSection && (
+        <div className="fixed z-50 bottom-5 right-5">
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            offset={-50} // Adjust if you have a fixed navbar
+          >
+            <div className="w-10 h-10 flex justify-center items-center bg-gradient-to-l from-[#fb7185] via-[#a21caf] to-[#6366f1] rounded-full shadow-lg hover:scale-110 transition-transform duration-300">
+              <ArrowUp className="w-7 h-7 text-white" />
+            </div>
+          </Link>
+        </div>
+      )}
+
       <div id="home">
         <Hero />
       </div>
+      <LearningJourney/>
       <FeaturedProjects />
+      <Marquee />
       <ExperienceSection />
       <CustomAccordion />
     </div>

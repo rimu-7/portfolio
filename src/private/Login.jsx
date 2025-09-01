@@ -47,7 +47,7 @@ const Login = () => {
 				<button type="submit" className="bg-green-500 text-white p-2 rounded">
 					Login
 				</button>
-				<span>Don't have and account? <Link to="/register" className="text-blue-500">SignUp</Link></span>
+				{/* <span>Don't have and account? <Link to="/register" className="text-blue-500">SignUp</Link></span> */}
 			</form>
 		</div>
 	);

@@ -131,7 +131,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="p-4 max-w-5xl mx-auto">
+    <div className="p-4 max-w-5xl pt-25 mx-auto">
       <h2 className="text-3xl font-bold mb-6 text-center">Profile</h2>
       {user ? (
         <div className="space-y-2 mb-8 max-w-2xl mx-auto text-center">

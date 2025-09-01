@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import { useState, useEffect } from "react";
 import ContactForm from "../pages/ContactForm";
 import DownloadButton from "./DownloadButton";
+import { BiBoltCircle } from "react-icons/bi";
 
 const Navbar = () => {
 	const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -48,6 +49,16 @@ const Navbar = () => {
 							offset={-50} // Adjust if you have a fixed navbar
 							className="tooltip" data-tip="Home">
 							<LucideHome className="w-5 h-5" />
+						</Link>
+					</li>
+					<li>
+						<Link
+							to="learning"
+							smooth={true}
+							duration={500}
+							offset={-50} // Adjust if you have a fixed navbar
+							className="tooltip" data-tip="Technologies">
+							<BiBoltCircle className="w-5 h-5" />
 						</Link>
 					</li>
 					<li>
