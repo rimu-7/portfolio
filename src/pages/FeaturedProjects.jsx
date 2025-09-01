@@ -15,9 +15,8 @@ const FeaturedProjects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get(
-          `https://personal-portfolio-backend-weld.vercel.app/api/projects`
-        );
+        const response = await axios.get("/api/projects");
+
         const sortedProjects = response.data.sort(
           (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
         );
